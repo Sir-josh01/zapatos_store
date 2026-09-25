@@ -23,8 +23,9 @@
 
 ## Links
 
-- **Repository:** [GitHub Repository](https://github.com/your-username/zapatos-store)
-- **Live Demo:** [Zapatos Store Live](https://zapatos-store.vercel.app)
+- **Repository:** [GitHub Repository](https://github.com/Sir-josh01/zapatos-store)
+<!-- - **Live Demo:** [Zapatos Store Live](https://zapatos-store.vercel.app) -->
+<!-- live demo is not stabilized. -->
 
 ---
 
