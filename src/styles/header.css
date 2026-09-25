@@ -1,0 +1,193 @@
+/* Site Header Wrapper */
+.site-header {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  font-family: inherit;
+}
+
+/* 1. Top Announcement Bar */
+.top-announcement {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.75rem;
+  padding: 8px 15px;
+  letter-spacing: 0.5px;
+}
+
+/* 2. Middle Header Bar */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  gap: 20px;
+}
+
+/* Brand Logo */
+.header-logo a {
+  text-decoration: none;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-transform: lowercase;
+}
+
+.brand-tagline {
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #555555;
+  margin-top: 2px;
+}
+
+/* Search Bar */
+.header-search {
+  position: relative;
+  flex: 1;
+  max-width: 420px;
+}
+
+.header-search input {
+  width: 100%;
+  padding: 8px 36px 8px 14px;
+  border: 1px solid #cccccc;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  outline: none;
+}
+
+.header-search input:focus {
+  border-color: #000000;
+}
+
+.search-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #666666;
+}
+
+/* Utilities Row */
+.header-utilities {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.78rem;
+  color: #333333;
+}
+
+.utility-contact {
+  color: #333333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.utility-divider {
+  color: #cccccc;
+}
+
+.utility-dropdown {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.utility-icon-link {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #000000;
+}
+
+.cart-btn {
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background-color: #e53935;
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 3. Bottom Category Nav Bar */
+.category-nav {
+  border-top: 1px solid #f0f0f0;
+  padding: 10px 0;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-menu a:hover {
+  opacity: 0.6;
+}
+
+/* Responsive Rules */
+@media (max-width: 992px) {
+  .utility-contact, .utility-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    flex-wrap: wrap;
+  }
+
+  .header-search {
+    order: 3;
+    max-width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-menu {
+    gap: 16px;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 0 20px;
+  }
+}

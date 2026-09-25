@@ -1,0 +1,105 @@
+.category-section {
+  padding: 60px 20px;
+}
+
+/* 1. Header Title Centered Between Two Horizontal Lines */
+.section-title-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.section-title-divider .line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--border-color);
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+/* 2. Grid System: 3 Columns Desktop, Responsive 2 Columns Mobile */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Category Card Container */
+.category-card {
+  position: relative;
+  height: 280px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+}
+
+.category-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.category-card:hover .category-card-img {
+  transform: scale(1.05);
+}
+
+/* 3. White Background Button with Black Text & Arrow */
+.category-btn {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text writeup */
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all var(--transition-fast);
+}
+
+.category-btn .btn-arrow {
+  font-size: 1.1rem;
+  transition: transform var(--transition-fast);
+}
+
+.category-btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.category-btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* 4. Responsive Rule: Collapse to 2 columns on small/jammed screens */
+@media (max-width: 768px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .category-card {
+    height: 200px;
+  }
+
+  .section-title {
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+  }
+}

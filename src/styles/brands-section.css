@@ -1,0 +1,85 @@
+.brands-section {
+  padding: 40px 20px 80px 20px;
+}
+
+.brands-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 30px 10px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  overflow-x: auto;
+}
+
+.brand-text-item {
+  cursor: pointer;
+  padding: 6px 12px;
+  user-select: none;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+  opacity: 0.8;
+}
+
+.brand-text-item:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Custom Brand Typography Styles */
+.brand-brooks {
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 1.5px;
+}
+
+.brand-vans {
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.brand-fila {
+  font-weight: 900;
+  letter-spacing: 5px;
+}
+
+.brand-nike {
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
+.brand-salomon {
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.brand-adidas {
+  font-weight: 800;
+  text-transform: lowercase;
+  letter-spacing: -0.5px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .brands-row {
+    justify-content: flex-start;
+    gap: 24px;
+    scrollbar-width: none;
+  }
+
+  .brands-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .brand-name {
+    font-size: 1.25rem;
+  }
+}

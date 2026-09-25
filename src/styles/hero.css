@@ -1,0 +1,188 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  padding: 40px 0 60px 0;
+  overflow: hidden;
+  background-color: var(--bg-primary);
+}
+
+.hero-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Nav Arrows */
+.hero-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all var(--transition-fast);
+}
+
+.hero-arrow:hover {
+  background-color: var(--accent-black);
+  color: var(--accent-white);
+  border-color: var(--accent-black);
+}
+
+/* Content Layout Grid */
+.hero-content {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.8fr 1fr;
+  align-items: center;
+  min-height: 420px;
+}
+
+/* 1. Giant Centered Background Text */
+.giant-title-wrapper {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.giant-title {
+  font-size: clamp(6rem, 16vw, 15rem);
+  font-weight: 900;
+  letter-spacing: -6px;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  line-height: 0.85;
+}
+
+/* 2. Left Column Styling */
+.hero-col-left {
+  z-index: 2;
+  padding-right: 20px;
+}
+
+.left-statement {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+/* 3. Center Overlapping Shoe Material */
+.hero-center-shoe {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.shoe-image {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.15));
+  transform: rotate(-12deg) scale(1.1);
+  transition: transform var(--transition-normal);
+}
+
+.hero-center-shoe:hover .shoe-image {
+  transform: rotate(-8deg) scale(1.15);
+}
+
+/* CTA Button */
+.hero-cta-btn {
+  margin-top: -20px;
+  padding: 12px 28px;
+  background-color: var(--accent-black);
+  color: var(--accent-white);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+  z-index: 4;
+}
+
+.hero-cta-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* 4. Right Column Styling */
+.hero-col-right {
+  z-index: 2;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.right-statement {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Single-row 4-item pill table/row */
+.four-item-row {
+  display: flex;
+  gap: 6px;
+  background-color: var(--bg-secondary);
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.pill-item {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 900px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .hero-col-right {
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .hero-col-left {
+    padding-right: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .giant-title {
+    font-size: 5rem;
+    letter-spacing: -2px;
+  }
+}

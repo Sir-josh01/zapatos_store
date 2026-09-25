@@ -1,0 +1,47 @@
+:root {
+  /* Color Tokens (Light Mode Defaults) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f6f6f6;
+  --bg-tertiary: #eeeeee;
+  
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --text-muted: #888888;
+  
+  --border-color: #e0e0e0;
+  --border-dark: #000000;
+  
+  --accent-black: #000000;
+  --accent-white: #ffffff;
+  --sale-badge: #d9534f;
+
+  /* Typography */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Spacing & Layout */
+  --max-width: 1320px;
+  --header-height: 80px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  
+  /* Transitions (for smooth theme toggles & animations) */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+/* Future-Proofing: Preparing Dark Mode overrides right now */
+[data-theme="dark"] {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-tertiary: #2a2a2a;
+  
+  --text-primary: #ffffff;
+  --text-secondary: #bbbbbb;
+  --text-muted: #888888;
+  
+  --border-color: #333333;
+  --border-dark: #ffffff;
+  
+  --accent-black: #ffffff;
+  --accent-white: #000000;
+}
