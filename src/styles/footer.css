@@ -3,13 +3,14 @@
   background-color: #f8f8f8;
   color: #222222;
   font-family: inherit;
+  margin-top: 60px;
 }
 
 /* 1. Newsletter Banner Overlay */
 .newsletter-banner {
   position: relative;
   background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
-                    url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1600&q=80');
+  url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1600&q=80');
   background-size: cover;
   background-position: center;
   padding: 70px 20px;

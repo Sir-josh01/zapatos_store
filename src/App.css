@@ -182,3 +182,18 @@
     border-right-color: var(--border);
   }
 }
+
+
+/* space for sections */
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Adjust spacing (e.g., 60px to 100px) */
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    gap: 40px; /* Reduced gap for smaller screens */
+  }
+}

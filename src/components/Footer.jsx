@@ -119,7 +119,8 @@ export default function Footer() {
       <div className="bottom-bar">
         <div className="bottom-container container">
           <p className="copyright-text">
-            © 2026 Zapatos. Store by Blazecommerce.io
+            {/* © 2026 Zapatos. Store by Blazecommerce.io */}
+            © 2026 Zapatos. Store by mr sunny!
           </p>
 
           <div className="payment-badges">
